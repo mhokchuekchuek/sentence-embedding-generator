@@ -8,14 +8,9 @@ def read_requirements(path: str) -> list:
 
 base_requirements = read_requirements("requirements.txt")
 
-with open("readme.md", "r") as readme_file:
-    long_description = readme_file.read()
-
 setup(
     name="sentence-embedding-generator",
     version="0.0.1",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
     packages=find_packages(include=["embedding_generator.*"]),
     python_requires=">=3.9",
     install_requires=base_requirements,
